@@ -1,0 +1,29 @@
+-----------------------------------------------------------------------------------------------------
+Folder - 001 (status information)
+-----------------------------------------------------------------------------------------------------
+001 - Hi, your device is being updated, please wait.
+002 - Your device is ready. You might now ask Google for your next activity.
+003 - Hi, your device has not been authenticated yet. Please open a terminal and follow the steps indicated.
+004 - Your request has been received, I am now locating your next event.
+005 - Location and time found, please wait while I estimate the ideal departure time.   
+006 - There are no events scheduled on your calendar for the next three hours.
+007 - An error has occurred. Please open a terminal to see what caused the error and fix it before rebooting your device.
+008 - Based on your current location, you would be on time for your upcoming event by leaving in
+009 - The results showed that you have to leave now to be on time for your upcoming event.
+010 - Based on your current location, if you leave now, you would be late for your upcoming event by 
+-----------------------------------------------------------------------------------------------------
+Folder - 002 (hours)
+-----------------------------------------------------------------------------------------------------
+001 - one hour and
+002 - two hours and
+003 - three hours and  
+-----------------------------------------------------------------------------------------------------
+Folder - 003 (min)
+-----------------------------------------------------------------------------------------------------
+001 - one minute
+002 - two minutes
+003 - three minutes
+.
+.
+.
+059 - fifty nine minutes

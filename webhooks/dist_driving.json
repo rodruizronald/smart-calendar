@@ -1,0 +1,18 @@
+{
+    "event": "dist_driving",
+    "deviceID": "<TYPE_YOUR_DEVICE_ID_HERE>",
+    "responseTopic": "{{{PARTICLE_DEVICE_ID}}}/hook-response/{{{PARTICLE_EVENT_NAME}}}",
+    "url": "https://maps.googleapis.com/maps/api/distancematrix/json?",
+    "requestType": "GET",
+    "noDefaults": true,
+    "rejectUnauthorized": true,
+    "responseTemplate": "{{{rows.0.elements.0.distance.text}}}~{{{rows.0.elements.0.duration_in_traffic.value}}}~{{{rows.0.elements.0.status}}}~{{{status}}}",
+    "query": {
+        "origins": "{{{origin}}}",
+        "destinations": "{{{destination}}}",
+        "mode": "driving",
+        "units": "imperial",
+        "departure_time": "{{{curr_time}}}", 
+        "key": "<TYPE_YOUR_API_KEY_HERE>"
+    }
+}

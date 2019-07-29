@@ -1,0 +1,21 @@
+{
+    "event": "calendar_event",
+    "deviceID": "<TYPE_YOUR_DEVICE_ID_HERE>",
+    "responseTopic": "{{{PARTICLE_DEVICE_ID}}}/hook-response/{{{PARTICLE_EVENT_NAME}}}",
+    "errorResponseTopic": "{{{PARTICLE_DEVICE_ID}}}/hook-error/{{{PARTICLE_EVENT_NAME}}}",
+    "url": "https://www.googleapis.com/calendar/v3/calendars/{{{calendar_id}}}/events?",
+    "requestType": "GET",
+    "noDefaults": true,
+    "rejectUnauthorized": true,
+    "responseTemplate": "{{{items.0.start.dateTime}}}~{{{items.0.location}}}",
+    "headers": {
+        "Authorization": "Bearer {{{access_token}}}"
+    },
+    "query": {
+        "orderBy": "starttime",
+        "singleEvents": true,
+        "maxResults": 1,
+        "timeMin": "{{{time_min}}}",
+        "timeMax": "{{{time_max}}}"
+    }
+}

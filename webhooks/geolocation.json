@@ -1,0 +1,18 @@
+{
+    "event": "geolocation",
+    "deviceID": "<TYPE_YOUR_DEVICE_ID_HERE>",
+    "responseTopic": "{{{PARTICLE_DEVICE_ID}}}/hook-response/{{{PARTICLE_EVENT_NAME}}}",
+    "errorResponseTopic": "{{{PARTICLE_DEVICE_ID}}}/hook-error/{{{PARTICLE_EVENT_NAME}}}",
+    "url": "https://www.googleapis.com/geolocation/v1/geolocate?",
+    "requestType": "POST",
+    "noDefaults": true,
+    "rejectUnauthorized": true,
+    "responseTemplate": "{{{location.lat}}}~{{{location.lng}}}~{{{accuracy}}}",
+    "headers": {
+        "Content-Type": "application/json"
+    },
+    "query": {
+        "key": "<TYPE_YOUR_API_KEY_HERE>"
+    },
+    "body": "{\"considerIp\":false,\"wifiAccessPoints\":[{{#a}}{\"macAddress\":\"{{m}}\",\"signalStrength\":{{s}},\"channel\":{{c}} },{{/a}}{\"macAddress\":\"{{a.0.m}}\",\"signalStrength\":{{a.0.s}},\"channel\":{{a.0.c}} }]}"
+}

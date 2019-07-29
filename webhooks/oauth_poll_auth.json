@@ -1,0 +1,17 @@
+{
+    "event": "oauth_poll_auth",
+    "deviceID": "<TYPE_YOUR_DEVICE_ID_HERE>",
+    "responseTopic": "{{{PARTICLE_DEVICE_ID}}}/hook-response/{{{PARTICLE_EVENT_NAME}}}",
+    "errorResponseTopic": "{{{PARTICLE_DEVICE_ID}}}/hook-error/{{{PARTICLE_EVENT_NAME}}}",
+    "url": "https://www.googleapis.com/oauth2/v4/token",
+    "requestType": "POST",
+    "noDefaults": true,
+    "rejectUnauthorized": true,
+    "responseTemplate": "{{{access_token}}}~{{{refresh_token}}}~{{{expires_in}}}",
+    "json": {
+        "client_id": "{{{client_id}}}",
+        "client_secret": "{{{client_secret}}}",
+        "code": "{{{code}}}",
+        "grant_type": "http://oauth.net/grant_type/device/1.0"
+    }
+}

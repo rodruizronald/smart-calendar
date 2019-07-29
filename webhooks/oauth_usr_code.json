@@ -1,0 +1,15 @@
+{
+    "event": "oauth_usr_code",
+    "deviceID": "<TYPE_YOUR_DEVICE_ID_HERE>",
+    "responseTopic": "{{{PARTICLE_DEVICE_ID}}}/hook-response/{{{PARTICLE_EVENT_NAME}}}",
+    "errorResponseTopic": "{{{PARTICLE_DEVICE_ID}}}/hook-error/{{{PARTICLE_EVENT_NAME}}}",
+    "url": "https://accounts.google.com/o/oauth2/device/code",
+    "requestType": "POST",
+    "noDefaults": true,
+    "rejectUnauthorized": true,
+    "responseTemplate": "{{{device_code}}}~{{{user_code}}}~{{{verification_url}}}~{{{expires_in}}}~{{{interval}}}",
+    "json": {
+        "client_id": "{{{client_id}}}",
+        "scope": "email https://www.googleapis.com/auth/calendar.readonly"
+    }
+}
